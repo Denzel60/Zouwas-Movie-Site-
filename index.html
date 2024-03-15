@@ -2,21 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css" />
     <title>HomePage</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container1">
         <div class="outer">
             <section id="header">
                 <div class="lsl">
-                    <div class="logo"></div>
+                    <div class="logo">
+                        <img src="./Pictures/" alt="" height=150/>
+                    </div>
                     <div class="search">
-                        <form action="">
-                            <input type="search" class="bar" placeholder="Search Movies">
-                            <button  class="lens"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
+                        <div class="container">
+                            <input type="text" name="text" class="input" required="" placeholder="Type to search...">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                                    <title>Search</title>
+                                    <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"></path>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                     <div class="login"></div>
                 </div>
