@@ -3,7 +3,7 @@
     margin: 0;
     width: 100%;
 }
-.container{
+.container1{
     position:absolute;
     left: 0;
     top: 0;
@@ -36,40 +36,62 @@
     }
 }
 
-.lsl .search {
-    width: 40%;
+.lsl {
+    width: 100%;
     display: flex;
-    position: absolute;
     top: 10%;
-    left: 50%;
-    right: 50%;
-    transform: translate(-20%, -70%);
-    padding: 40px;
-}
-
-.search button{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    white-space: no-wrap;
-}
-
-.bar{
-    top: 20px;
-    display: flex;
-    height: 35px;
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 80px 0 0 80px;
-    justify-content: center;
-    border: 1px solid transparent;
-    font-size: 15px;
     padding: 10px;
-    outline: none;
 }
 
-.lens{
-    display: flex;
-    border-radius: 0px 80px 80px 0;
-    width: 10%;
-    height: 35px;
-}
+/* This is a container for the items on the container class. 
+It has a relative positioning so that the items inside it can be positioned relative to this container. 
+It has a color of white to set the text color. */
+.container {
+    position: relative;
+    --size-button: 40px;
+    color: white;
+  }
+  
+  .input {
+    padding-left: var(--size-button);
+    height: var(--size-button);
+    font-size: 15px;
+    border: none;
+    color: #fff;
+    outline: none;
+    width: var(--size-button);
+    transition: all ease 0.3s;
+    background-color: #191A1E;
+    box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .input:focus,
+  .input:not(:invalid) {
+    width: 200px;
+    cursor: text;
+    box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+  }
+  
+  .input:focus + .icon,
+  .input:not(:invalid) + .icon {
+    pointer-events: all;
+    cursor: pointer;
+  }
+  
+  .container .icon {
+    position: absolute;
+    width: var(--size-button);
+    height: var(--size-button);
+    top: 0;
+    left: 0;
+    padding: 8px;
+    pointer-events: none;
+  }
+  
+  .container .icon svg {
+    width: 100%;
+    height: 100%;
+  }
+/* end of the container for search bar */
