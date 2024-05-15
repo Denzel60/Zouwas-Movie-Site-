@@ -1,168 +1,167 @@
-*{
-    border: 0;
-    margin: 0;
-    width: 100%;
-
+* {
+  border: 0;
+  margin: 0;
+  width: 100%;
 }
-.container1{
-    position:absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    animation: animate 10s ease-in-out infinite;
-    background-size: cover;
-    }
-.outer{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+/* .container1 {
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-size: cover;
+} */
+section .outer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  animation: animate 10s ease-in-out infinite;
 }
 
-@keyframes animate{
-    0%,100%{
-        background-image: url(../Pictures/dune-part-two-2023-movies-5120x5120-11407.jpg);
-    }
-    25%{
-        background-image: url(../Pictures/the-beekeeper.jpg);
-    }
-    50%{
-        background-image: url(../Pictures/wp6.jpg);
-    }
-    75%{
-        background-image: url(../Pictures/wp4.jpeg);
-    }
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url(../Pictures/dune-part-two-2023-movies-5120x5120-11407.jpg);
+  }
+  25% {
+    background-image: url(../Pictures/the-beekeeper.jpg);
+  }
+  50% {
+    background-image: url(../Pictures/wp6.jpg);
+  }
+  75% {
+    background-image: url(../Pictures/wp4.jpeg);
+  }
 }
 
-.lsl{
-    display: flex;
-    justify-content: space-between;
-    height: 10vh;
-    align-items: center;
+.lsl {
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  align-items: center;
+  background-color: #5f5e5e;
 }
 
-.lsl .logo{
-    width: 30%;
-    padding: 20px;
+.lsl-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:;
 }
 
-.lsl .search {
-    width: 40%;
-    position: relative;
-    padding: 20px;
-    justify-content: center;
+.lsl-item img {
+  object-fit: contain;
 }
 
 .container {
-    position: relative;
-    --size-button: 40px;
-    color: white;
-  }
-  
-  .input {
-    padding-left: var(--size-button);
-    height: var(--size-button);
-    font-size: 15px;
-    border: none;
-    color: #fff;
-    outline: none;
-    width: var(--size-button);
-    transition: all ease 0.3s;
-    background-color: #191A1E;
-    box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  
-  .input:focus,
-  .input:not(:invalid) {
-    width: 200px;
-    cursor: text;
-    box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
-  }
-  
-  .input:focus + .icon,
-  .input:not(:invalid) + .icon {
-    pointer-events: all;
-    cursor: pointer;
-  }
-  
-  .container .icon {
-    position: absolute;
-    width: var(--size-button);
-    height: var(--size-button);
-    top: 0;
-    left: 0;
-    padding: 8px;
-    pointer-events: none;
-  }
-  
-  .container .icon svg {
-    width: 100%;
-    height: 100%;
-  }
-
-.lsl .login{
-    width: 30%;
-    padding: 20px;
+  position: relative;
+  --size-button: 40px;
+  color: white;
 }
 
-.lsl a{
-    justify-content: flex-end;
-    color: black;
-    font-size: 30px;
-    font-weight: 300;
-    text-decoration: none;
+.input {
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #191a1e;
+  box-shadow:
+    1.5px 1.5px 3px #0e0e0e,
+    -1.5px -1.5px 3px rgb(95 94 94 / 25%),
+    inset 0px 0px 0px #0e0e0e,
+    inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-.lsl a:hover{
-    color: #088178;
-    text-decoration: underline;
+.input:focus,
+.input:not(:invalid) {
+  width: 200px;
+  cursor: text;
+  box-shadow:
+    0px 0px 0px #0e0e0e,
+    0px 0px 0px rgb(95 94 94 / 25%),
+    inset 1.5px 1.5px 3px #0e0e0e,
+    inset -1.5px -1.5px 3px #5f5e5e;
+}
+
+.input:focus + .icon,
+.input:not(:invalid) + .icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.container .icon {
+  position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  top: 0;
+  left: 0;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.container .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.lsl a {
+  justify-content: flex-end;
+  color: black;
+  font-size: 30px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.lsl a:hover {
+  color: #088178;
+  text-decoration: underline;
 }
 
 /* navigation bar styling begins */
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.navbar ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-  
-  .navbar li{
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
-  }
-  
-  .navbar li a{
-    text-decoration: none;
-    font-size: 35px;
-    font-weight: 600;
-    color: #1a1a1a;
-    transition: 0.3s ease;
-    transform: scale(90%);
-  }
-  
-  .navbar li a:hover,
-  .navbar li a.active{
-    color: #088178;
-  }
-  
-  .navbar li a.active::after,
-  .navbar li a:hover::after{
-    content: "";
-    width:30%;
-    height: 2px;
-    background: #088178;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-  }
+
+.navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+  transform: scale(90%);
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  color: #088178;
+}
+
+.navbar li a.active::after,
+.navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
