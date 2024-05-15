@@ -1,36 +1,9 @@
+/* universal styling for the page  */
 * {
   border: 0;
   margin: 0;
   width: 100%;
-}
-/* .container1 {
-  left: 0;
-  top: 0;
-  width: 100%;
-  background-size: cover;
-} */
-section .outer {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.5);
-  animation: animate 10s ease-in-out infinite;
-}
-
-@keyframes animate {
-  0%,
-  100% {
-    background-image: url(../Pictures/dune-part-two-2023-movies-5120x5120-11407.jpg);
-  }
-  25% {
-    background-image: url(../Pictures/the-beekeeper.jpg);
-  }
-  50% {
-    background-image: url(../Pictures/wp6.jpg);
-  }
-  75% {
-    background-image: url(../Pictures/wp4.jpeg);
-  }
+  background-color: #01706100;
 }
 
 .lsl {
@@ -44,69 +17,12 @@ section .outer {
 .lsl-item {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding:;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .lsl-item img {
   object-fit: contain;
-}
-
-.container {
-  position: relative;
-  --size-button: 40px;
-  color: white;
-}
-
-.input {
-  padding-left: var(--size-button);
-  height: var(--size-button);
-  font-size: 15px;
-  border: none;
-  color: #fff;
-  outline: none;
-  width: var(--size-button);
-  transition: all ease 0.3s;
-  background-color: #191a1e;
-  box-shadow:
-    1.5px 1.5px 3px #0e0e0e,
-    -1.5px -1.5px 3px rgb(95 94 94 / 25%),
-    inset 0px 0px 0px #0e0e0e,
-    inset 0px -0px 0px #5f5e5e;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.input:focus,
-.input:not(:invalid) {
-  width: 200px;
-  cursor: text;
-  box-shadow:
-    0px 0px 0px #0e0e0e,
-    0px 0px 0px rgb(95 94 94 / 25%),
-    inset 1.5px 1.5px 3px #0e0e0e,
-    inset -1.5px -1.5px 3px #5f5e5e;
-}
-
-.input:focus + .icon,
-.input:not(:invalid) + .icon {
-  pointer-events: all;
-  cursor: pointer;
-}
-
-.container .icon {
-  position: absolute;
-  width: var(--size-button);
-  height: var(--size-button);
-  top: 0;
-  left: 0;
-  padding: 8px;
-  pointer-events: none;
-}
-
-.container .icon svg {
-  width: 100%;
-  height: 100%;
 }
 
 .lsl a {
@@ -164,4 +80,97 @@ section .outer {
   position: absolute;
   bottom: -4px;
   left: 20px;
+}
+
+/* All the stylings of the search bar */
+.container {
+  position: relative;
+  --size-button: 40px;
+  color: white;
+}
+
+.input {
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #191a1e;
+  box-shadow:
+    1.5px 1.5px 3px #0e0e0e,
+    -1.5px -1.5px 3px rgb(95 94 94 / 25%),
+    inset 0px 0px 0px #0e0e0e,
+    inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.input:focus,
+.input:not(:invalid) {
+  width: 200px;
+  cursor: text;
+  box-shadow:
+    0px 0px 0px #0e0e0e,
+    0px 0px 0px rgb(95 94 94 / 25%),
+    inset 1.5px 1.5px 3px #0e0e0e,
+    inset -1.5px -1.5px 3px #5f5e5e;
+}
+
+.input:focus + .icon,
+.input:not(:invalid) + .icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.container .icon {
+  position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  top: 0;
+  left: 0;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.container .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation of the page  */
+.container-animate{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation-box {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: animate 10s ease-in-out infinite;
+  animation-iteration-count: infinite;  
+  animation-direction: alternate;
+  object-fit: cover;
+  margin-top: 20px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #151515);
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url(../Pictures/dune-part-two-2023-movies-5120x5120-11407.jpg);
+  }
+  25% {
+    background-image: url(../Pictures/the-beekeeper.jpg);
+  }
+  50% {
+    background-image: url(../Pictures/wp6.jpg);
+  }
+  75% {
+    background-image: url(../Pictures/wp4.jpeg);
+  }
 }
