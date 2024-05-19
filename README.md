@@ -34,7 +34,6 @@ To run this project locally, follow these steps:
 
 3. Install dependencies:
 
-
 4. Set up environment variables:
 
 Create a `.env` file in the root directory and add the following variables:
